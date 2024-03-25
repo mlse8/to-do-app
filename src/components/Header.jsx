@@ -1,0 +1,13 @@
+import Typography from '@mui/material/Typography';
+
+export default function Header(){
+    return <div className="addTask">
+            <Typography 
+            align={'center'} 
+            variant='h1' 
+            sx={{py:2, fontWeight: 'bold', fontSize: '3rem', color: '#333'}}
+            >
+                To Do App
+            </Typography>
+        </div>
+}
