@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Grid from '@mui/material/Grid';
 import Form from "./components/Form";
-// import TodoList from "./components/TodoList";
+import ToDoList from "./components/ToDoList";
 import TaskFilter from "./components/TaskFilter";
 
 export default function App() {
@@ -68,7 +68,7 @@ export default function App() {
                     <TaskFilter filter={filter} setFilter={setFilter} tasks={tasks} />
                 </Grid>
                 <Grid item={true} xs={12} sm={8}>
-                    {/* <TodoList
+                    <ToDoList
                         tasks={tasks}
                         filteredTasks={filteredTasks}
                         completeTask={completeTask}
@@ -82,7 +82,7 @@ export default function App() {
                         setEditedTask={setEditedTask}
                         selectedTaskId={selectedTaskId}
                         setSelectedTaskId={setSelectedTaskId}
-                    /> */}
+                    />
                 </Grid>
             </Grid>
         </>
