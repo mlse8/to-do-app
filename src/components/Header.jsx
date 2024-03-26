@@ -1,7 +1,8 @@
 import Typography from '@mui/material/Typography';
 
 export default function Header(){
-    return <div>
+    return (
+        <div>
             <Typography 
             align={'center'} 
             variant='h1' 
@@ -10,4 +11,5 @@ export default function Header(){
                 To Do App
             </Typography>
         </div>
+    );
 }

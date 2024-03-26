@@ -14,10 +14,10 @@ export default function DeleteConfirmationDialog({
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} color="primary">
+                <Button onClick={handleClose} color="error">
                     CANCELAR
                 </Button>
-                <Button onClick={handleDeleteConfirm} color="error" autoFocus>
+                <Button onClick={handleDeleteConfirm} color="secondary" autoFocus>
                     BORRAR
                 </Button>
             </DialogActions>

@@ -25,8 +25,12 @@ export default function ToDoList({
     };    
 
     const handleEditSave = () => {
-        setEditModalOpen(false);
-        editTask(editedTask.id, editedTask.text);
+        if (editedTask.text.length >= 4 && editedTask.text.length <= 100){
+            setEditModalOpen(false);
+            editTask(editedTask.id, editedTask.text);
+        } else {
+            alert('La tarea debe tener entre 4 y 100 caracteres');
+        }
     };
 
     return (

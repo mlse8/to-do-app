@@ -12,7 +12,7 @@ export default function EditDialog({
             <DialogTitle>Editar Tarea</DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    Por favor, modifica la tarea:
+                    Modifica la tarea:
                 </DialogContentText>
                 <TextField
                     autoFocus
@@ -21,15 +21,16 @@ export default function EditDialog({
                     label="Tarea"
                     type="text"
                     fullWidth
+                    color="secondary"
                     value={editedTask.text}
                     onChange={(e) => setEditedTask({ ...editedTask, text: e.target.value })}
                 />
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} color="primary">
+                <Button onClick={handleClose} color="error">
                     CANCELAR
                 </Button>
-                <Button onClick={handleEditSave} color="primary">
+                <Button onClick={handleEditSave} color="secondary">
                     GUARDAR
                 </Button>
             </DialogActions>
