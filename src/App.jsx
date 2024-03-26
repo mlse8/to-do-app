@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Grid from '@mui/material/Grid';
-import Form from "./components/Form";
+import FormFormik from "./components/FormFormik";
 import ToDoList from "./components/ToDoList";
 import TaskFilter from "./components/TaskFilter";
 import Footer from "./components/Footer";
@@ -12,7 +12,7 @@ export default function App() {
     const [filter, setFilter] = useState("all");
     const [editModalOpen, setEditModalOpen] = useState(false);
     const [deleteModalOpen, setDeleteModalOpen] = useState(false);
-    const [editedTask, setEditedTask] = useState(null);
+    const [editedTask, setEditedTask] = useState('');
     const [selectedTaskId, setSelectedTaskId] = useState(null);
 
     const saveTasksToLocalStorage = (updatedTasks) => {
@@ -66,7 +66,7 @@ export default function App() {
             <Header />
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid sx={{mt:2.5}} item={true} xs={12} sm={4} md={3}>
-                    <Form addTask={addTask} />
+                    <FormFormik addTask={addTask} />
                     <TaskFilter filter={filter} setFilter={setFilter} tasks={tasks} />
                 </Grid>
                 <Grid item={true} xs={12} sm={8}>

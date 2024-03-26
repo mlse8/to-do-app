@@ -1,6 +1,8 @@
-import { List, Alert, Button, TextField, Typography } from "@mui/material";
+import { List, Typography } from "@mui/material";
 import emptyListImage from '../assets/empty.svg';
-import ToDo from './ToDo'
+import ToDo from './ToDo';
+import EditDialog from './EditDialog'; 
+import DeleteDialog from './DeleteDialog'; 
 
 export default function ToDoList({
     filteredTasks,
@@ -56,43 +58,20 @@ export default function ToDoList({
                 </List>
             )}
 
-            {/* Alerta para modificar */}
-            {editModalOpen && (
-                <Alert
-                    severity="info"
-                    color="secondary"
-                    variant="outlined"
-                    action={
-                        <>
-                            <Button color="secondary" onClick={() => setEditModalOpen(false)}>CANCELAR</Button>
-                            <Button color="secondary" onClick={handleEditSave}>GUARDAR</Button>
-                        </>
-                    }
-                >
-                    <TextField
-                        fullWidth
-                        label="Tarea"
-                        value={editedTask.text}
-                        onChange={(e) => setEditedTask({ ...editedTask, text: e.target.value })}
-                    />
-                </Alert>
-            )}
-
-            {/* Alerta para confirmar eliminacion */}
-            {deleteModalOpen && (
-                <Alert
-                    severity="warning"
-                    variant="outlined"
-                    action={
-                        <>
-                            <Button onClick={() => setDeleteModalOpen(false)}>CANCELAR</Button>
-                            <Button onClick={() => handleDeleteConfirm(selectedTaskId)} color="error">BORRAR</Button>
-                        </>
-                    }
-                >
-                    ¿Seguro que deseas eliminar la tarea?
-                </Alert>
-            )}
+            {/* Modal de edición */}
+            <EditDialog
+                open={editModalOpen}
+                handleClose={() => setEditModalOpen(false)}
+                handleEditSave={() => handleEditSave(editedTask)}
+                editedTask={editedTask}
+                setEditedTask={setEditedTask}
+            />
+            {/* Modal de confirmación de eliminación */}
+            <DeleteDialog
+                open={deleteModalOpen}
+                handleClose={() => setDeleteModalOpen(false)}
+                handleDeleteConfirm={() => handleDeleteConfirm(selectedTaskId)}
+            />
         </>
     );
 }
