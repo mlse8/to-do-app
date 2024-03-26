@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 
 export default function Header(){
-    return <div className="addTask">
+    return <div>
             <Typography 
             align={'center'} 
             variant='h1' 

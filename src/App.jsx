@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 import TaskFilter from "./components/TaskFilter";
+import Footer from "./components/Footer";
 
 export default function App() {
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -61,6 +62,7 @@ export default function App() {
 
     return (
         <>
+            <div style={{ maxWidth: '1400px', padding: '1rem', margin: 'auto', minHeight: '72vh'}}>
             <Header />
             <Grid container spacing={2} justifyContent="space-around">
                 <Grid sx={{mt:2.5}} item={true} xs={12} sm={4} md={3}>
@@ -85,6 +87,8 @@ export default function App() {
                     />
                 </Grid>
             </Grid>
+            </div>
+            <Footer />
         </>
     );
 }
