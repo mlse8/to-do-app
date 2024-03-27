@@ -1,8 +1,27 @@
-# React + Vite
+# App Lista de Tareas
+https://to-do-app-ruddy-two.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación simple, adaptable, de listas de tareas construida con React.
 
-Currently, two official plugins are available:
+[![Captura-de-pantalla-229.png](https://i.postimg.cc/vZvJ7k8W/Captura-de-pantalla-229.png)](https://postimg.cc/68ybtHv3)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Captura-de-pantalla-230.png](https://i.postimg.cc/zGRLVwJZ/Captura-de-pantalla-230.png)](https://postimg.cc/21rjtZb2)
+
+## Funcionalidades
+<ul>
+  <li>Agregar Tareas</li>
+  <li>Modificar Tareas</li>
+  <li>Eliminar Tareas</li>
+  <li>Filtros: Se pueden filtrar las tareas por completadas, incompletas o todas las tareas</li>
+</ul>
+
+## Tecnologías utilizadas
+<ul>
+  <li>React</li>
+  <li>JavaScript</li>
+  <li>Material UI</li>
+</ul>
+
+### Vista en celulares
+[![Captura-de-pantalla-232-removebg-preview.png](https://i.postimg.cc/0jFks3K6/Captura-de-pantalla-232-removebg-preview.png)](https://postimg.cc/bS0c0mT8)
+[![Captura-de-pantalla-231-removebg-preview.png](https://i.postimg.cc/6psWbkNg/Captura-de-pantalla-231-removebg-preview.png)](https://postimg.cc/dLBcLS3j)
